@@ -419,7 +419,7 @@ function QBCore.Player.CreatePlayer(PlayerData)
         local slots = QBCore.Player.GetSlotsByItem(self.PlayerData.items, item)
         for _, slot in pairs(slots) do
             if slot then
-                table.insert(items, self.PlayerData.items[slot])
+                items[#items+1] = self.PlayerData.items[slot]
             end
         end
         return items
@@ -527,10 +527,10 @@ end
 
 QBCore.Player.LoadInventory = function(PlayerData)
     PlayerData.items = {}
-    local result = exports.oxmysql:executeSync('SELECT * FROM players WHERE citizenid = ?', { PlayerData.citizenid })
-    if result[1] then
-        if result[1].inventory then
-            plyInventory = json.decode(result[1].inventory)
+    local result = exports.oxmysql:singleSync('SELECT * FROM players WHERE citizenid = ?', { PlayerData.citizenid })
+    if result then
+        if result.inventory then
+            local plyInventory = json.decode(result.inventory)
             if next(plyInventory) then
                 for _, item in pairs(plyInventory) do
                     if item then
@@ -569,13 +569,13 @@ QBCore.Player.SaveInventory = function(source)
         if items and next(items) then
             for slot, item in pairs(items) do
                 if items[slot] then
-                    table.insert(ItemsJson, {
+                    ItemsJson[#ItemsJson+1] = {
                         name = item.name,
                         amount = item.amount,
                         info = item.info,
                         type = item.type,
                         slot = slot,
-                    })
+                    }
                 end
             end
             exports.oxmysql:execute('UPDATE players SET inventory = ? WHERE citizenid = ?', { json.encode(ItemsJson), PlayerData.citizenid })
@@ -602,7 +602,7 @@ function QBCore.Player.GetSlotsByItem(items, itemName)
     if items then
         for slot, item in pairs(items) do
             if item.name:lower() == itemName:lower() then
-                table.insert(slotsFound, slot)
+                slotsFound[#slotsFound+1] = slot
             end
         end
     end

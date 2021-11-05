@@ -1820,7 +1820,15 @@ QBShared.Vehicles = {
 		['hash'] = `clique`,
 		['shop'] = 'pdm',
 	},
-
+	['coquette3'] = {
+		['name'] = 'Coquette BlackFin',
+		['brand'] = 'Invetero',
+		['model'] = 'coquette3',
+		['price'] = 180000,
+		['category'] = 'muscle',
+		['hash'] = `coquette3`,
+		['shop'] = 'pdm',
+	},
 	['deviant'] = {							--DLC
 		['name'] = 'Deviant',
 		['brand'] = 'Schyster',
@@ -2145,6 +2153,15 @@ QBShared.Vehicles = {
 		['hash'] = `picador`,
 		['shop'] = 'pdm',
 	},
+	['ratloader2'] = {
+		['name'] = 'ratloader2',
+		['brand'] = 'Ratloader2',
+		['model'] = 'ratloader2',
+		['price'] = 20000,
+		['category'] = 'muscle',
+		['hash'] = `ratloader2`,
+		['shop'] = 'pdm',
+	},	
 	['ruiner'] = {
 		['name'] = 'Ruiner',
 		['brand'] = 'Imponte',
@@ -2280,6 +2297,15 @@ QBShared.Vehicles = {
 		['hash'] = `virgo2`,
 		['shop'] = 'pdm',
 	},
+	['virgo3'] = {
+		['name'] = 'Virgo Custom Classic',
+		['brand'] = 'Dundreary',
+		['model'] = 'virgo3',
+		['price'] = 21000,
+		['category'] = 'muscle',
+		['hash'] = `virgo3`,
+		['shop'] = 'pdm',
+	},	
 	['voodoo'] = {
 		['name'] = 'Voodoo',
 		['brand'] = 'Declasse',
@@ -3192,15 +3218,6 @@ QBShared.Vehicles = {
 		['hash'] = `coquette2`,
 		['shop'] = 'pdm',
 	},
-	['coquette3'] = {
-		['name'] = 'Coquette BlackFin',
-		['brand'] = 'Invetero',
-		['model'] = 'coquette3',
-		['price'] = 180000,
-		['category'] = 'muscle',
-		['hash'] = `coquette3`,
-		['shop'] = 'pdm',
-	},	
 	['coquette4'] = {
 		['name'] = 'Coquette D10',
 		['brand'] = 'Invetero',
