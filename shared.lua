@@ -429,7 +429,7 @@ QBShared.Items = {
 	['fishingrod'] 			 		 = {['name'] = 'fishingrod', 					['label'] = 'Fishing Rod', 				['weight'] = 5000, 		['type'] = 'item', 		['image'] = 'fishingrod.png', 			['unique'] = false, 	['useable'] = true, 	['shouldClose'] = true,	   ['combinable'] = nil,   ['description'] = 'A fishing rod for adventures with friends!!'},
 	['fishingbait'] 			     = {['name'] = 'fishingbait', 					['label'] = 'Fish Bait', 				['weight'] = 400, 		['type'] = 'item', 		['image'] = 'fishbait.png', 			['unique'] = false, 	['useable'] = true, 	['shouldClose'] = true,	   ['combinable'] = nil,   ['description'] = 'A fish bait'},
 
-    -- //Crafting table
+    -- Crafting table
     ['craftingtable'] 			     = {['name'] = 'craftingtable', 				['label'] = 'Crafting Table', 			['weight'] = 400, 		['type'] = 'item', 		['image'] = 'craftingtable.png', 		['unique'] = true, 	    ['useable'] = true, 	['shouldClose'] = true,    ['combinable'] = nil,   ['description'] = ''},
     ['recipe_bagofdope'] 			 = {['name'] = 'recipe_bagofdope', 				['label'] = 'Recipe: Bag of Dope', 		['weight'] = 400, 		['type'] = 'item', 		['image'] = 'recipe_bagofdope.png', 	['unique'] = false, 	['useable'] = true, 	['shouldClose'] = false,   ['combinable'] = nil,   ['description'] = ''},
     ['bagofdope'] 			         = {['name'] = 'bagofdope', 					['label'] = 'Bag of Dope', 				['weight'] = 400, 		['type'] = 'item', 		['image'] = 'bagofdope.png', 			['unique'] = false, 	['useable'] = true, 	['shouldClose'] = false,   ['combinable'] = nil,   ['description'] = ''},
@@ -437,13 +437,22 @@ QBShared.Items = {
     ['drugscales'] 			         = {['name'] = 'drugscales', 					['label'] = 'Scales', 				    ['weight'] = 400, 		['type'] = 'item', 		['image'] = 'drugscales.png', 			['unique'] = false, 	['useable'] = true, 	['shouldClose'] = false,   ['combinable'] = nil,   ['description'] = ''},
     ['dopebag'] 			         = {['name'] = 'dopebag', 					    ['label'] = 'Empty Dope Bag', 			['weight'] = 400, 		['type'] = 'item', 		['image'] = 'dopebag.png', 			    ['unique'] = false, 	['useable'] = true, 	['shouldClose'] = false,   ['combinable'] = nil,   ['description'] = ''},
 
-    -- //Custom Items
+    -- Custom Items
     ['usb-blank'] 			 	     = {['name'] = 'usb-blank', 			  		['label'] = 'Blank USB', 			    ['weight'] = 200, 		['type'] = 'item', 		['image'] = 'usb-blank.png', 			['unique'] = true, 		['useable'] = true, 	['shouldClose'] = true,    ['combinable'] = nil,   ['description'] = 'Empty USB stick'},
     ['usb-red'] 			 	     = {['name'] = 'usb-red', 			  		    ['label'] = 'Red USB', 			        ['weight'] = 200, 		['type'] = 'item', 		['image'] = 'usb-red.png', 			    ['unique'] = true, 		['useable'] = true, 	['shouldClose'] = true,    ['combinable'] = nil,   ['description'] = 'A red USB stick, I wonder what it contains?'},
     ['usb-blue'] 			 	     = {['name'] = 'usb-blue', 			  		    ['label'] = 'Blue USB', 			    ['weight'] = 200, 		['type'] = 'item', 		['image'] = 'usb-blue.png', 			['unique'] = true, 		['useable'] = true, 	['shouldClose'] = true,    ['combinable'] = nil,   ['description'] = 'A blue USB stick, I wonder what it contains?'},
     ['usb-gold'] 			 	     = {['name'] = 'usb-gold', 			  		    ['label'] = 'Gold USB', 			    ['weight'] = 200, 		['type'] = 'item', 		['image'] = 'usb-gold.png', 			['unique'] = true, 		['useable'] = true, 	['shouldClose'] = true,    ['combinable'] = nil,   ['description'] = 'A gold USB stick, I wonder what it contains?'},
     ['usb-green'] 			 	     = {['name'] = 'usb-green', 			  		['label'] = 'Green USB', 			    ['weight'] = 200, 		['type'] = 'item', 		['image'] = 'usb-green.png', 			['unique'] = true, 		['useable'] = true, 	['shouldClose'] = true,    ['combinable'] = nil,   ['description'] = 'A green USB stick, I wonder what it contains?'},
     ['usb-purple'] 			 	     = {['name'] = 'usb-purple', 			  		['label'] = 'Purple USB', 			    ['weight'] = 200, 		['type'] = 'item', 		['image'] = 'usb-purple.png', 			['unique'] = true, 		['useable'] = true, 	['shouldClose'] = true,    ['combinable'] = nil,   ['description'] = 'A purple USB stick, I wonder what it contains?'},
+
+	-- Mining
+	['diamond'] 					 = {['name'] = 'diamond', 			  	  		['label'] = 'Diamond', 					['weight'] = 100, 		['type'] = 'item', 		['image'] = 'diamond.png', 				['unique'] = false, 	['useable'] = false, 	['shouldClose'] = false,   ['combinable'] = nil,   ['description'] = ''},
+	['emerald'] 					 = {['name'] = 'emerald', 			  	  		['label'] = 'Emerald', 					['weight'] = 100, 		['type'] = 'item', 		['image'] = 'emerald.png', 				['unique'] = false, 	['useable'] = false, 	['shouldClose'] = false,   ['combinable'] = nil,   ['description'] = ''},
+
+	-- Chicken Job
+	["alivechicken"] 				 = {["name"] = "alivechicken", 			  	  	["label"] = "alivechicken", 			["weight"] = 500, 		["type"] = "item", 		["image"] = "alivechicken.png", 		["unique"] = false, 	["useable"] = true, 	["shouldClose"] = true,	   ["combinable"] = nil,   ["description"] = ""},
+	["packagedchicken"] 			 = {["name"] = "packagedchicken", 			  	["label"] = "packagedchicken", 			["weight"] = 500, 		["type"] = "item", 		["image"] = "packagedchicken.png", 		["unique"] = false, 	["useable"] = true, 	["shouldClose"] = true,	   ["combinable"] = nil,   ["description"] = ""},
+	["slaughteredchicken"] 			 = {["name"] = "slaughteredchicken", 			["label"] = "slaughteredchicken", 		["weight"] = 500, 		["type"] = "item", 		["image"] = "slaughteredchicken.png", 	["unique"] = false, 	["useable"] = true, 	["shouldClose"] = true,	   ["combinable"] = nil,   ["description"] = ""},
 }
 
 -- // HASH WEAPON ITEMS, NEED SOMETIMES TO GET INFO FOR CLIENT
