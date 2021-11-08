@@ -8,19 +8,13 @@ for i = 65,  90 do StringCharset[#StringCharset+1] = string.char(i) end
 for i = 97, 122 do StringCharset[#StringCharset+1] = string.char(i) end
 
 QBShared.RandomStr = function(length)
-    if length > 0 then
-        return QBShared.RandomStr(length - 1) .. StringCharset[math.random(1, #StringCharset)]
-    else
-        return ''
-    end
+    if length < 0 then return '' end
+    return QBShared.RandomStr(length - 1) .. StringCharset[math.random(1, #StringCharset)]
 end
 
 QBShared.RandomInt = function(length)
-    if length > 0 then
-        return QBShared.RandomInt(length - 1) .. NumberCharset[math.random(1, #NumberCharset)]
-    else
-        return ''
-    end
+    if length < 0 then return '' end
+    return QBShared.RandomInt(length - 1) .. NumberCharset[math.random(1, #NumberCharset)]
 end
 
 QBShared.SplitStr = function(str, delimiter)
@@ -36,15 +30,17 @@ QBShared.SplitStr = function(str, delimiter)
     return result
 end
 
--- Math Rounding Credits: http://lua-users.org/wiki/SimpleRound
-QBShared.Sign = function(v)
-	return (v >= 0 and 1) or -1
+QBShared.Trim = function(value)
+	if not value then return nil end
+    return (string.gsub(value, '^%s*(.-)%s*$', '%1'))
 end
 
-QBShared.Round = function(v, bracket)
-	bracket = bracket or 1
-	return QBShared.Sign(v/bracket + QBShared.Sign(v) * 0.5) * bracket
+QBShared.Round = function(value, numDecimalPlaces)
+    if not numDecimalPlaces then return math.floor(value + 0.5) end
+    local power = 10 ^ numDecimalPlaces
+    return math.floor((value * power) + 0.5) / (power)
 end
+
 
 QBShared.StarterItems = {
     ['phone'] = { amount = 1, item = 'phone' },
