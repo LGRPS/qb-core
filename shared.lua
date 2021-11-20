@@ -2478,6 +2478,7 @@ QBShared.Vehicles = {
 	},
 	['blazer'] = {
 		['name'] = 'Blazer',
+		['brand'] = 'Annis',
 		['price'] = 7500,
 		['category'] = 'offroad',
 		['model'] = 'blazer',
